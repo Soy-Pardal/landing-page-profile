@@ -1,0 +1,185 @@
+
+/* Importando fontes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* Inserção de variavél para facilitar o uso de cores padrões */
+:root{
+    --background-color: #1d1d22;
+    --secondary-text: #8dc63f;
+    --primary--text: #00a651;
+
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+html{
+    color: white;
+    font-family: "Roboto", serif;
+}
+
+body{
+    background-color: var(--background-color);
+}
+
+a{
+    color: white;
+}
+
+
+/* Estilizando o cabeçalho */
+header{
+    position: fixed;
+    max-width: 1280px;
+    width: 100%;
+    display: flex;
+    padding: 24px;
+    margin: auto;
+    flex-direction: column;
+    align-items:end;
+}
+
+header ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+header li{
+    text-align: center;
+    min-width: 30%;
+    padding: 5px;
+    display: block;
+    font-size: 24px;
+}
+
+.container-social{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+    
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Coloca as partículas atrás do conteúdo */
+}
+
+/* Estilizando as seções */
+
+section{
+    display: flex;
+    padding: 0 24px;
+    height: 100vh;
+    align-items: center;
+}
+
+.left-container{    
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+}
+
+.left-container p{
+    font-size: 18px;
+}
+
+.left-container button{
+    padding: 15px 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 20px;
+    width: 200px;
+    border: none;
+    background: linear-gradient(45deg, #00a651, #8dc63f);
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.left-container button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    background: linear-gradient(45deg, #8dc63f,#00a651, );
+}
+
+
+h1 {
+    font-size: 3.5em;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bold;
+    color: white; /* Cor padrão para o restante do texto */
+}
+
+
+.highlight {
+    background: linear-gradient(45deg, #00a651, #8dc63f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    background-clip: text;
+    color: transparent; 
+    font-weight: bold;
+}
+
+
+.right-container{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    height: auto;
+}
+
+.right-container img{
+    width: 75%;
+    height: 75%;
+    object-fit: contain;
+}
+
+
+.fade-in {
+    opacity: 0; /* Inicia invisível */
+    animation: fadeIn 1.5s ease forwards; /* Aplica a animação */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.slide-in-text {
+    opacity: 0;
+    transform: translateY(20px); /* Começa ligeiramente fora de sua posição */
+    animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Posição inicial */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Posição final */
+    }
+}
+
+.fade-in-button {
+    opacity: 0; /* Começa invisível */
+    animation: fadeIn 1.5s ease forwards;
+}
